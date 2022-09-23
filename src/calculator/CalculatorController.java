@@ -2,12 +2,6 @@ package calculator;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-
-/**
- * The Calculator Controller.
- *
- * @author Andrés Salinas Lima {@literal <i52salia@uco.es>}
- */
 final class CalculatorController {
 
     private final CalculatorModel model;
