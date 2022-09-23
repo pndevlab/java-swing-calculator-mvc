@@ -3,11 +3,6 @@ package calculator;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-/**
- * The Calculator Model.
- *
- * @author Andrés Salinas Lima {@literal <i52salia@uco.es>}
- */
 final class CalculatorModel {
 
     /**

@@ -4,13 +4,7 @@ import javax.swing.JButton;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 
-/**
- * The Calculator View.
- *
- * Created (mostly) automatically by NetBeans.
- *
- * @author Andrés Salinas Lima {@literal <i52salia@uco.es>}
- */
+
 final class CalculatorView extends javax.swing.JFrame {
 
     /**
