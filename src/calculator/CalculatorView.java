@@ -53,6 +53,7 @@ final class CalculatorView extends javax.swing.JFrame {
         num8Button = new javax.swing.JButton();
         num9Button = new javax.swing.JButton();
         num0Button = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Calculator");
@@ -65,9 +66,14 @@ final class CalculatorView extends javax.swing.JFrame {
         resultField.setEditable(false);
         resultField.setFont(new java.awt.Font("Ubuntu", 0, 24)); // NOI18N
         resultField.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        resultField.setText("1234567890,123");
+        resultField.setText("0");
         resultField.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         resultField.setFocusable(false);
+        resultField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                resultFieldActionPerformed(evt);
+            }
+        });
         resultScrollPane.setViewportView(resultField);
 
         operationField.setEditable(false);
@@ -83,37 +89,42 @@ final class CalculatorView extends javax.swing.JFrame {
         resetButton.setFocusable(false);
 
         cleanButton.setFont(new java.awt.Font("Ubuntu", 1, 14)); // NOI18N
-        cleanButton.setForeground(new java.awt.Color(255, 161, 0));
+        cleanButton.setForeground(new java.awt.Color(92, 199, 178));
         cleanButton.setText("CE");
         cleanButton.setFocusable(false);
+        cleanButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cleanButtonActionPerformed(evt);
+            }
+        });
 
         signButton.setFont(new java.awt.Font("Ubuntu", 1, 14)); // NOI18N
-        signButton.setForeground(new java.awt.Color(255, 161, 0));
+        signButton.setForeground(new java.awt.Color(92, 199, 178));
         signButton.setText("+/-");
         signButton.setFocusable(false);
 
         divButton.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        divButton.setForeground(new java.awt.Color(255, 161, 0));
+        divButton.setForeground(new java.awt.Color(92, 199, 178));
         divButton.setText("÷");
         divButton.setFocusable(false);
 
         mulButton.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        mulButton.setForeground(new java.awt.Color(255, 161, 0));
+        mulButton.setForeground(new java.awt.Color(92, 199, 178));
         mulButton.setText("×");
         mulButton.setFocusable(false);
 
         subButton.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        subButton.setForeground(new java.awt.Color(255, 161, 0));
+        subButton.setForeground(new java.awt.Color(92, 199, 178));
         subButton.setText("-");
         subButton.setFocusable(false);
 
         addButton.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        addButton.setForeground(new java.awt.Color(255, 161, 0));
+        addButton.setForeground(new java.awt.Color(92, 199, 178));
         addButton.setText("+");
         addButton.setFocusable(false);
 
         equalButton.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
-        equalButton.setForeground(new java.awt.Color(255, 0, 0));
+        equalButton.setForeground(new java.awt.Color(0, 0, 0));
         equalButton.setText("=");
         equalButton.setFocusable(false);
 
@@ -150,6 +161,9 @@ final class CalculatorView extends javax.swing.JFrame {
 
         num0Button.setText("0");
         num0Button.setFocusable(false);
+
+        jLabel1.setFont(new java.awt.Font("SF Mono", 0, 18)); // NOI18N
+        jLabel1.setText("CALCULATOR");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -210,11 +224,17 @@ final class CalculatorView extends javax.swing.JFrame {
                                     .addGap(18, 18, 18)
                                     .addComponent(subButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(100, 100, 100))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(28, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(resultScrollPane)
                     .addComponent(operationField, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -247,11 +267,19 @@ final class CalculatorView extends javax.swing.JFrame {
                     .addComponent(num0Button, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(dotButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(equalButton, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 6, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void cleanButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cleanButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cleanButtonActionPerformed
+
+    private void resultFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resultFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_resultFieldActionPerformed
 
     /**
      * Returns the addButton button.
@@ -457,6 +485,7 @@ final class CalculatorView extends javax.swing.JFrame {
     private javax.swing.JButton divButton;
     private javax.swing.JButton dotButton;
     private javax.swing.JButton equalButton;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JButton mulButton;
     private javax.swing.JButton num0Button;
     private javax.swing.JButton num1Button;
